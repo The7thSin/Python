@@ -70,11 +70,12 @@ def get_droplet_ip():
         if i.name == server_name:
             return i.ip_address
 
-print("Creating Server")
+
+print("Creating Server {}".format(server_name))
 
 # Wait for Server Created
 while server_status() == "in-progress":
     server_status()
 
 print("Your Droplet IP is {}".format(get_droplet_ip()))
-print("Server Created, Bye Bye!")
+print("Server {} Created, Bye Bye!".format(server_name))
